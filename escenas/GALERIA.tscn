@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd88usy71tqaa"]
+
+[ext_resource type="Script" uid="uid://d1euemc6qd4sr" path="res://escenas/main.gd" id="1_cvur8"]
+[ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="3_me7lx"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-16, 44)
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+script = ExtResource("1_cvur8")
+
+[node name="MarginContainer" type="MarginContainer" parent="Main"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -10.0
+offset_right = 1134.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main/MarginContainer/VBoxContainer"]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/MarginContainer/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -31.0
+offset_right = 1067.0
+offset_bottom = 605.0
+
+[node name="Button" type="Button" parent="Main/MarginContainer/VBoxContainer/TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Main/MarginContainer/VBoxContainer/TextureRect/HBoxContainer/Button"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Atras" parent="." instance=ExtResource("3_me7lx")]
+offset_left = 14.0
+offset_top = 539.0
+offset_right = 108.0
+offset_bottom = 580.0
+text = "Atrás"
+nombre_escena = "INTO"

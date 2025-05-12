@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://blx1xcnflkgpp"]
+
+[ext_resource type="Script" uid="uid://dhu54yfmq3qu2" path="res://audio_stream_player_2d.gd" id="1_tqbvc"]
+[ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="4_5rtwu"]
+[ext_resource type="Script" uid="uid://cw0fcyb61lh1" path="res://script/m_usicon.gd" id="4_xjgq0"]
+[ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="5_t487a"]
+[ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://BOTON DE SONIDO.tscn" id="7_f4jvn"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r4oa5"]
+
+[node name="AJUSTES" type="Node2D"]
+
+[node name="Ajustes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sonido" type="Label" parent="Ajustes"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 66.0
+offset_right = 939.0
+offset_bottom = 117.0
+text = "SONIDO"
+
+[node name="Musicoff" type="Button" parent="Ajustes"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Atras" parent="Ajustes" instance=ExtResource("4_5rtwu")]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 466.0
+offset_right = 255.0
+offset_bottom = 584.0
+text = "Atrás"
+nombre_escena = "INTO"
+
+[node name="mUSICON" type="TextureButton" parent="Ajustes"]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 95.0
+offset_right = 828.0
+offset_bottom = 377.0
+script = ExtResource("4_xjgq0")
+
+[node name="Musicatitlescreen" type="AudioStreamPlayer2D" parent="Ajustes/mUSICON"]
+material = SubResource("CanvasItemMaterial_r4oa5")
+stream = ExtResource("5_t487a")
+script = ExtResource("1_tqbvc")
+
+[node name="SONIDOAJUSTEES" type="Node2D" parent="."]
+
+[node name="Control" parent="." instance=ExtResource("7_f4jvn")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 650.0
+offset_top = 252.0
+offset_right = 650.0
+offset_bottom = 252.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="Ajustes/mUSICON" to="Ajustes" method="_on_m_usicon_pressed"]

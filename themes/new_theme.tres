@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cvqajuf4lqtxb"]
+
+[ext_resource type="Texture2D" uid="uid://cyxyg3votqf6j" path="res://assets/sonidojuegoon.png" id="1_s1hyc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uw25j"]
+texture = ExtResource("1_s1hyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_765p2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdd43"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xi8vc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_isyij"]
+texture = ExtResource("1_s1hyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fljcm"]
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_uw25j")
+Button/styles/disabled_mirrored = SubResource("StyleBoxTexture_765p2")
+Button/styles/focus = SubResource("StyleBoxTexture_rdd43")
+Button/styles/hover = SubResource("StyleBoxTexture_xi8vc")
+Button/styles/normal = SubResource("StyleBoxTexture_isyij")
+Button/styles/pressed = SubResource("StyleBoxTexture_fljcm")

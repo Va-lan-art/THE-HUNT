@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwsblfdhkd1sa"]
+
+[ext_resource type="Texture2D" uid="uid://d0xkb22kr0ixm" path="res://galeria/mano.png" id="1_2pfr0"]
+[ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="2_b5lqy"]
+[ext_resource type="Texture2D" uid="uid://rxs44rsnojxf" path="res://intro.png" id="2_rpqgi"]
+[ext_resource type="AudioStream" uid="uid://cqfdj36viviyv" path="res://SONIDOS/gunshot-and-reverse-81760.mp3" id="9_8hjl4"]
+[ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="14_u6ooh"]
+[ext_resource type="Script" uid="uid://o6njwbtdxd7g" path="res://script/musica_fondo.gd" id="15_u6ooh"]
+
+[node name="INTRO" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 451.0
+offset_top = 221.0
+offset_right = 491.0
+offset_bottom = 261.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -451.0
+offset_top = -222.0
+offset_right = 700.0
+offset_bottom = 430.0
+texture = ExtResource("1_2pfr0")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.269
+anchor_top = 0.5
+anchor_right = -0.269
+anchor_bottom = 0.5
+offset_left = -377.24
+offset_top = -238.0
+offset_right = 636.76
+offset_bottom = 410.0
+rotation = -0.00117343
+texture = ExtResource("2_rpqgi")
+
+[node name="Galería" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+layout_mode = 0
+offset_left = 27.655
+offset_top = 294.033
+offset_right = 281.655
+offset_bottom = 412.033
+text = "GALERIA"
+nombre_escena = "GALERIA"
+
+[node name="Salir" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+layout_mode = 0
+offset_left = 32.5306
+offset_top = 400.038
+offset_right = 224.531
+offset_bottom = 518.038
+text = "SALIR"
+es_boton_salida = true
+sonido_personalizado = ExtResource("9_8hjl4")
+
+[node name="Jugar" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+layout_mode = 0
+offset_left = 23.8826
+offset_top = 100.028
+offset_right = 215.883
+offset_bottom = 218.028
+text = "JUGAR"
+nombre_escena = "INICIOANIMACION"
+
+[node name="Ajustes" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+layout_mode = 0
+offset_left = 22.7688
+offset_top = 197.027
+offset_right = 271.769
+offset_bottom = 315.027
+text = "AJUSTES"
+nombre_escena = "AJUSTES"
+
+[node name="musicafondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_u6ooh")
+script = ExtResource("15_u6ooh")
