@@ -4,7 +4,12 @@ extends Button
 @export var nombre_escena: String = ""          # Ej: "MENU" (ignorado si es_boton_salida=true)
 @export var carpeta_escenas: String = "res://escenas/"
 @export var es_boton_salida: bool = false       # Marca esto para que el botón cierre el juego
+@export var es_boton_galeria: bool = false      # Nuevo: Si es true, emite señal en lugar de cambiar escena
 @export var sonido_personalizado: AudioStream   # Sonido para salida (opcional)
+
+### --- SEÑALES --- ###
+signal galeria_anterior_presionado
+signal galeria_siguiente_presionado
 
 ### --- PROPIEDADES DE ANIMACIÓN --- ###
 @export var escala_hover: Vector2 = Vector2(1.2, 1.2)
@@ -38,12 +43,17 @@ func animar_escalado(escala_final: Vector2):
 ### --- LÓGICA PRINCIPAL --- ###
 func _on_button_pressed():
 	$SonidoPulsado.play()
-	await get_tree().create_timer(0.2).timeout  # Espera mínima
+	await get_tree().create_timer(0.2).timeout
 	
 	if es_boton_salida:
 		await salir_del_juego()
+	elif es_boton_galeria:
+		if "anterior" in name.to_lower():  # Detecta si el botón tiene "anterior" en su nombre
+			emit_signal("galeria_anterior_presionado")
+		else:
+			emit_signal("galeria_siguiente_presionado")
 	elif nombre_escena != "":
-		cambiar_escena()
+		cambiar_escena()  # Comportamiento por defecto
 
 ### --- FUNCIONES ESPECÍFICAS --- ###
 func cambiar_escena():
@@ -60,6 +70,4 @@ func salir_del_juego():
 		add_child(audio)
 		audio.play()
 		await audio.finished
-	
-	get_tree().quit()  # Cierra el juego
-	# Para web: JavaScriptBridge.eval("window.close()", true)
+	get_tree().quit()
