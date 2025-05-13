@@ -24,6 +24,7 @@ func _ready():
 	actualizar_pagina()
 	conectar_botones()
 
+# Estilo
 func _aplicar_estilos():
 	var estilo_borde = StyleBoxFlat.new()
 	estilo_borde.bg_color = Color(0.0, 0.0, 0.0, 0.0)  # Fondo semitransparente
