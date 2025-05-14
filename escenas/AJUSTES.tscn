@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://blx1xcnflkgpp"]
 
-[ext_resource type="Script" uid="uid://dhu54yfmq3qu2" path="res://audio_stream_player_2d.gd" id="1_tqbvc"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="1_tqbvc"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="4_5rtwu"]
-[ext_resource type="Script" uid="uid://cw0fcyb61lh1" path="res://script/m_usicon.gd" id="4_xjgq0"]
-[ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="5_t487a"]
+[ext_resource type="Script" path="res://script/m_usicon.gd" id="4_xjgq0"]
+[ext_resource type="AudioStream" uid="uid://dbi6ftcrq1h2p" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="5_t487a"]
 [ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://BOTON DE SONIDO.tscn" id="7_f4jvn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r4oa5"]
@@ -31,10 +31,10 @@ offset_bottom = 8.0
 
 [node name="Atras" parent="Ajustes" instance=ExtResource("4_5rtwu")]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 466.0
-offset_right = 255.0
-offset_bottom = 584.0
+offset_left = 48.0
+offset_top = 480.0
+offset_right = 240.0
+offset_bottom = 598.0
 text = "Atrás"
 nombre_escena = "INTO"
 
@@ -50,6 +50,16 @@ script = ExtResource("4_xjgq0")
 material = SubResource("CanvasItemMaterial_r4oa5")
 stream = ExtResource("5_t487a")
 script = ExtResource("1_tqbvc")
+
+[node name="BotonReutilizable" parent="Ajustes" instance=ExtResource("4_5rtwu")]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 476.0
+offset_right = 1067.0
+offset_bottom = 594.0
+text = "CREDITOS"
+nombre_escena = "GodotCredits"
+carpeta_escenas = "res://CREDITS/"
 
 [node name="SONIDOAJUSTEES" type="Node2D" parent="."]
 
