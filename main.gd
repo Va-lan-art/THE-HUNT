@@ -1,6 +1,6 @@
 extends Node2D
 
-# Lista de imágenes (carga las rutas o usa Resources)
+
 var images = [
 	preload("res://galeria/2025-05-03_154007 (6).jpg"),
 	preload("res://galeria/2025-05-03_145743 (4).jpg"),

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl48u6qxhqehv"]
 
-[ext_resource type="Texture2D" uid="uid://u5hs1oeaciqe" path="res://assets/cuadro.png" id="1_n67hd"]
-[ext_resource type="Script" path="res://classes/boton_reutilizable.gd" id="1_pvy2d"]
-[ext_resource type="FontFile" uid="uid://fyxppy4r63p5" path="res://assets/Ichigayamincho-5yKDj.ttf" id="1_quflt"]
-[ext_resource type="AudioStream" uid="uid://cqg4dxujjl4cf" path="res://SONIDOS/old-radio-button-click-97549.mp3" id="3_44qib"]
-[ext_resource type="AudioStream" uid="uid://d3hbv6i4rtrf3" path="res://SONIDOS/hover.wav" id="3_n67hd"]
+[ext_resource type="Texture2D" uid="uid://iquv5gg21h4m" path="res://assets/cuadro.png" id="1_n67hd"]
+[ext_resource type="Script" uid="uid://6ghxx3erl4po" path="res://classes/boton_reutilizable.gd" id="1_pvy2d"]
+[ext_resource type="FontFile" uid="uid://dusmkbvdvtkcy" path="res://assets/Ichigayamincho-5yKDj.ttf" id="1_quflt"]
+[ext_resource type="AudioStream" uid="uid://ctdwcotctc3ip" path="res://SONIDOS/old-radio-button-click-97549.mp3" id="3_44qib"]
+[ext_resource type="AudioStream" uid="uid://d0snugpylwrp1" path="res://SONIDOS/hover.wav" id="3_n67hd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_quflt"]
 texture = ExtResource("1_n67hd")

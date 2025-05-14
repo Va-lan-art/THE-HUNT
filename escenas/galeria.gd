@@ -13,7 +13,7 @@ var pagina_actual: int = 0
 signal imagen_seleccionada(texture_rect: TextureRect)
 
 func _ready():
-	await get_tree().process_frame  # Espera a que los nodos estén listos
+	await get_tree().process_frame  
 	
 	if not grid:
 		push_error("GridContainer no encontrado!")
@@ -26,7 +26,7 @@ func _ready():
 
 func _aplicar_estilos():
 	var estilo_borde = StyleBoxFlat.new()
-	estilo_borde.bg_color = Color(0.0, 0.0, 0.0, 0.0)  # Fondo semitransparente
+	estilo_borde.bg_color = Color(0.0, 0.0, 0.0, 0.0)  
 	estilo_borde.border_color = Color(47/255.0, 18/255.0, 5/255.0)
 	estilo_borde.set_border_width_all(5)
 	estilo_borde.set_corner_radius_all(5)
@@ -35,19 +35,17 @@ func _aplicar_estilos():
 	for hijo in grid.get_children():
 		if hijo is TextureRect:
 			# Ajustes de tamaño
-			hijo.custom_minimum_size = Vector2(350, 250)  # Ancho x Alto
+			hijo.custom_minimum_size = Vector2(350, 250)  
 			hijo.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			hijo.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			
-			# Borde como nodo hijo (alternativa mejorada)
+			
 			var borde = Panel.new()
 			borde.add_theme_stylebox_override("panel", estilo_borde)
 			borde.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 			borde.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			hijo.add_child(borde)
-			
-			# Debug visual (opcional)
-			hijo.modulate = Color.WHITE  # Asegura visibilidad
+			hijo.modulate = Color.WHITE  
 
 func _on_texture_rect_input(event: InputEvent, texture_rect: TextureRect):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -74,7 +72,7 @@ func actualizar_pagina():  # ¡CORRECCIÓN CLAVE AQUÍ!
 		var texture_rect = grid.get_child(i) as TextureRect
 		if texture_rect:
 			if inicio + i < imagenes.size():
-				texture_rect.texture = load(imagenes[inicio + i])  # Usamos .texture, no .texture_normal
+				texture_rect.texture = load(imagenes[inicio + i]) 
 				texture_rect.visible = true
 			else:
 				texture_rect.visible = false

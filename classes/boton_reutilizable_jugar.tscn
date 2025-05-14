@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://defjsrvdesdqd"]
+
+[ext_resource type="FontFile" uid="uid://dusmkbvdvtkcy" path="res://assets/Ichigayamincho-5yKDj.ttf" id="1_dmt26"]
+[ext_resource type="Texture2D" uid="uid://iquv5gg21h4m" path="res://assets/cuadro.png" id="2_lfmqj"]
+[ext_resource type="Script" uid="uid://bv6bytexvtsmm" path="res://classes/boton_reutilizable_jugar.gd" id="3_dmt26"]
+[ext_resource type="AudioStream" uid="uid://d0snugpylwrp1" path="res://SONIDOS/hover.wav" id="4_niif2"]
+[ext_resource type="AudioStream" uid="uid://ctdwcotctc3ip" path="res://SONIDOS/old-radio-button-click-97549.mp3" id="5_ilqb6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_quflt"]
+texture = ExtResource("2_lfmqj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n67hd"]
+texture = ExtResource("2_lfmqj")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wslwf"]
+
+[node name="BotonReutilizableJUGAR" type="Button"]
+offset_left = 398.0
+offset_top = 216.0
+offset_right = 590.0
+offset_bottom = 334.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dmt26")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n67hd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_quflt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_quflt")
+text = "Text"
+icon = SubResource("CanvasTexture_wslwf")
+script = ExtResource("3_dmt26")
+
+[node name="SonidoHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_niif2")
+
+[node name="SonidoPulsado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ilqb6")

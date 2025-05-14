@@ -1,9 +1,9 @@
-extends TextureButton
-
+extends AnimationPlayer
 
 
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
+	play ("manoarrastrandose")
 
 
 func _process(delta: float) -> void:

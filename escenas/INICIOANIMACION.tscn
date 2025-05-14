@@ -1,58 +1,139 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyam1aicxcys1"]
+[gd_scene load_steps=17 format=3 uid="uid://cyam1aicxcys1"]
 
-[ext_resource type="Texture2D" uid="uid://bwuwdhplpsowp" path="res://assets/MESA .png" id="1_768m1"]
-[ext_resource type="Texture2D" uid="uid://d0xkb22kr0ixm" path="res://galeria/mano.png" id="2_b1xef"]
+[ext_resource type="Script" uid="uid://ddtdbplirs8xv" path="res://escenas/inicioanimacion.gd" id="1_rhb5d"]
+[ext_resource type="Script" uid="uid://mi47p50d0fe7" path="res://script/papel_1.gd" id="2_fudei"]
+[ext_resource type="Texture2D" uid="uid://6bxwvfybmxly" path="res://assets/MESA.png" id="2_udfhh"]
+[ext_resource type="Texture2D" uid="uid://dh1ekd7gbidtj" path="res://assets/papel-removebg-preview.png" id="2_uvn7o"]
+[ext_resource type="Shader" uid="uid://c152f1xfvvubp" path="res://escenas/PAPEL.gdshader" id="4_udfhh"]
+[ext_resource type="Script" uid="uid://k3twbmjot7wr" path="res://script/mano (2).gd" id="6_3eaty"]
+[ext_resource type="Script" uid="uid://b0xef7mthjal" path="res://script/manoarrastrandose.gd" id="6_6n4qe"]
+[ext_resource type="Shader" uid="uid://c1yh8v8gwtojq" path="res://escenas/MANO.gdshader" id="6_udfhh"]
+[ext_resource type="Texture2D" uid="uid://ct7e0cx5pw680" path="res://assets/manofinal.png" id="7_udfhh"]
 
-[sub_resource type="Animation" id="Animation_uvn7o"]
-length = 4.0
+[sub_resource type="CanvasTexture" id="CanvasTexture_udfhh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjyev"]
+shader = ExtResource("4_udfhh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0roi"]
+shader = ExtResource("6_udfhh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fudei"]
+size = Vector2(354, 471.5)
+
+[sub_resource type="Animation" id="Animation_fudei"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mano:position")
+tracks/0/path = NodePath("PAPEL1/Papel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(566, 834)]
+"values": [Vector2(0, 531)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PAPEL1/Papel/Mano:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 552)]
 }
 
-[sub_resource type="Animation" id="Animation_b1xef"]
-resource_name = "mano"
-length = 30.0
+[sub_resource type="Animation" id="Animation_uvn7o"]
+resource_name = "manoarrastrandose"
+length = 3.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mano:position")
+tracks/0/path = NodePath("PAPEL1/Papel/Mano:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.433333, 1.13333, 1.73333, 2.13333, 2.33333, 2.53333, 2.76667, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(515, 658), Vector2(429, 578)]
+"values": [Vector2(11, 552), Vector2(8, 487), Vector2(19, 450), Vector2(1, 364), Vector2(6, 286), Vector2(11, 233), Vector2(13, 205), Vector2(13, 139), Vector2(18, 65)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PAPEL1/Papel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.466667, 1.13333, 1.7, 2.2, 2.7, 3.03333, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 531), Vector2(3, 448), Vector2(3, 357), Vector2(0, 321), Vector2(5, 197), Vector2(8, 93), Vector2(5, -5), Vector2(4, -57)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fudei"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rhb5d"]
 _data = {
-&"RESET": SubResource("Animation_uvn7o"),
-&"mano": SubResource("Animation_b1xef")
+&"RESET": SubResource("Animation_fudei"),
+&"manoarrastrandose": SubResource("Animation_uvn7o")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rhb5d")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_fudei")
-}
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -80.0
+offset_top = -27.0
+offset_right = 1213.0
+offset_bottom = 658.0
+texture = SubResource("CanvasTexture_udfhh")
 
 [node name="Mesa" type="Sprite2D" parent="."]
-position = Vector2(614, 313)
+position = Vector2(585.727, 304)
 rotation = -1.57079
-scale = Vector2(0.967816, 0.97262)
-texture = ExtResource("1_768m1")
+scale = Vector2(0.967816, 0.739829)
+texture = ExtResource("2_udfhh")
 
-[node name="Mano" type="Sprite2D" parent="."]
-position = Vector2(566, 834)
-texture = ExtResource("2_b1xef")
+[node name="PAPEL1" type="Area2D" parent="."]
+position = Vector2(556, 330)
+script = ExtResource("2_fudei")
+
+[node name="Papel" type="Sprite2D" parent="PAPEL1"]
+material = SubResource("ShaderMaterial_yjyev")
+position = Vector2(0, 531)
+texture = ExtResource("2_uvn7o")
+
+[node name="Mano" type="Sprite2D" parent="PAPEL1/Papel"]
+material = SubResource("ShaderMaterial_g0roi")
+position = Vector2(11, 552)
+scale = Vector2(1.21853, 1.28389)
+texture = ExtResource("7_udfhh")
+script = ExtResource("6_3eaty")
+
+[node name="Camera2D" type="Camera2D" parent="PAPEL1"]
+position = Vector2(17, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PAPEL1"]
+position = Vector2(10, -19)
+shape = SubResource("RectangleShape2D_fudei")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+visibility_layer = 0
+offset_left = 5.0
+offset_right = 1150.0
+offset_bottom = 658.0
+
+[node name="manoarrastrandose" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rhb5d")
+}
+script = ExtResource("6_6n4qe")
+
+[connection signal="mouse_entered" from="PAPEL1" to="." method="_on_papel_1_mouse_entered"]
+[connection signal="mouse_exited" from="PAPEL1" to="." method="_on_papel_1_mouse_exited"]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwsblfdhkd1sa"]
+[gd_scene load_steps=8 format=3 uid="uid://bwsblfdhkd1sa"]
 
-[ext_resource type="Texture2D" uid="uid://d0xkb22kr0ixm" path="res://galeria/mano.png" id="1_2pfr0"]
+[ext_resource type="Texture2D" uid="uid://c0vrl67xjihjq" path="res://assets/fondo intro.png" id="1_2pfr0"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="2_b5lqy"]
-[ext_resource type="Texture2D" uid="uid://rxs44rsnojxf" path="res://intro.png" id="2_rpqgi"]
+[ext_resource type="PackedScene" uid="uid://defjsrvdesdqd" path="res://classes/boton_reutilizable_jugar.tscn" id="5_v0m5j"]
 [ext_resource type="AudioStream" uid="uid://cqfdj36viviyv" path="res://SONIDOS/gunshot-and-reverse-81760.mp3" id="9_8hjl4"]
 [ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="14_u6ooh"]
 [ext_resource type="Script" uid="uid://o6njwbtdxd7g" path="res://script/musica_fondo.gd" id="15_u6ooh"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2pfr0"]
 
 [node name="INTRO" type="Node2D"]
 
@@ -24,7 +26,7 @@ offset_left = -451.0
 offset_top = -222.0
 offset_right = 700.0
 offset_bottom = 430.0
-texture = ExtResource("1_2pfr0")
+texture = SubResource("CanvasTexture_2pfr0")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 layout_mode = 1
@@ -38,7 +40,7 @@ offset_top = -238.0
 offset_right = 636.76
 offset_bottom = 410.0
 rotation = -0.00117343
-texture = ExtResource("2_rpqgi")
+texture = ExtResource("1_2pfr0")
 
 [node name="Galería" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
 layout_mode = 0
@@ -59,14 +61,17 @@ text = "SALIR"
 es_boton_salida = true
 sonido_personalizado = ExtResource("9_8hjl4")
 
-[node name="Jugar" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+[node name="BotonReutilizableJUGAR" parent="Control/TextureRect2" instance=ExtResource("5_v0m5j")]
 layout_mode = 0
-offset_left = 23.8826
-offset_top = 100.028
-offset_right = 215.883
-offset_bottom = 218.028
-text = "JUGAR"
+offset_left = 29.8932
+offset_top = 91.0351
+offset_right = 221.893
+offset_bottom = 209.035
+text = "JUGAR
+"
 nombre_escena = "INICIOANIMACION"
+activar_animacion_entrada = true
+duracion_animacion = 3.5
 
 [node name="Ajustes" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
 layout_mode = 0

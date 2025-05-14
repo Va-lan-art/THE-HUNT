@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bndggbr7sm3ac"]
 
-[ext_resource type="Script" uid="uid://bv4e0ev24hxvb" path="res://boton_sonidocontrol.gd" id="1_sq21g"]
-[ext_resource type="Script" uid="uid://o8u8t64vdcct" path="res://slider_volumen.gd" id="2_8aa5b"]
+[ext_resource type="Script" uid="uid://bv4e0ev24hxvb" path="res://script/boton_sonidocontrol.gd" id="1_sq21g"]
+[ext_resource type="Script" uid="uid://o8u8t64vdcct" path="res://script/slider_volumen.gd" id="2_8aa5b"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

@@ -1,14 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://blx1xcnflkgpp"]
+[gd_scene load_steps=9 format=3 uid="uid://blx1xcnflkgpp"]
 
-[ext_resource type="Script" uid="uid://dhu54yfmq3qu2" path="res://audio_stream_player_2d.gd" id="1_tqbvc"]
+[ext_resource type="Script" uid="uid://dhu54yfmq3qu2" path="res://script/audio_stream_player_2d.gd" id="1_tqbvc"]
+[ext_resource type="Texture2D" uid="uid://c1grln33f4tmd" path="res://galeria/fondoajustes.png" id="1_xjgq0"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="4_5rtwu"]
 [ext_resource type="Script" uid="uid://cw0fcyb61lh1" path="res://script/m_usicon.gd" id="4_xjgq0"]
 [ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="5_t487a"]
-[ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://BOTON DE SONIDO.tscn" id="7_f4jvn"]
+[ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://escenas/BOTON DE SONIDO.tscn" id="7_f4jvn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xjgq0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r4oa5"]
 
 [node name="AJUSTES" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_top = -6.0
+offset_right = 1145.0
+offset_bottom = 685.0
+texture = SubResource("CanvasTexture_xjgq0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 62.0
+offset_top = -6.0
+offset_right = 1083.0
+offset_bottom = 687.0
+texture = ExtResource("1_xjgq0")
+expand_mode = 3
 
 [node name="Ajustes" type="Control" parent="."]
 layout_mode = 3
@@ -18,11 +36,11 @@ offset_bottom = 40.0
 
 [node name="Sonido" type="Label" parent="Ajustes"]
 layout_mode = 0
-offset_left = 810.0
-offset_top = 66.0
-offset_right = 939.0
-offset_bottom = 117.0
-text = "SONIDO"
+offset_left = 840.0
+offset_top = 91.0
+offset_right = 969.0
+offset_bottom = 142.0
+text = "MUSICA"
 
 [node name="Musicoff" type="Button" parent="Ajustes"]
 layout_mode = 0
@@ -63,5 +81,14 @@ offset_right = 650.0
 offset_bottom = 252.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="BotonReutilizable" parent="." instance=ExtResource("4_5rtwu")]
+offset_left = 784.0
+offset_top = 387.0
+offset_right = 1057.0
+offset_bottom = 505.0
+text = "CREDITOS
+"
+nombre_escena = "CREDITOS"
 
 [connection signal="pressed" from="Ajustes/mUSICON" to="Ajustes" method="_on_m_usicon_pressed"]
