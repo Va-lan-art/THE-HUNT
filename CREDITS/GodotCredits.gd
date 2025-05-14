@@ -33,7 +33,7 @@ var lines := []
 
 var credits = [
 	[
-		"A game by Awesome Game Company"
+		"AAAAAAAAAAAAAAA"
 	],[
 		"Programming",
 		"Programmer Name",

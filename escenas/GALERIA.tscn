@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd88usy71tqaa"]
+[gd_scene load_steps=4 format=3 uid="uid://dd88usy71tqaa"]
 
 [ext_resource type="Script" uid="uid://1wm8on7r26br" path="res://escenas/galeria.gd" id="1_gmlum"]
+[ext_resource type="Texture2D" uid="uid://cihutiiqxb4ms" path="res://assets/FONDO3.png" id="1_me7lx"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="3_me7lx"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-16, 44)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 68.0
+offset_top = -85.0
+offset_right = 1112.0
+offset_bottom = 718.0
+texture = ExtResource("1_me7lx")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(20, 20)
