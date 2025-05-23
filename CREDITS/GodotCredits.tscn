@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvtm4tk45sk30"]
 
-[ext_resource type="Script" path="res://CREDITS/GodotCredits.gd" id="1"]
+[ext_resource type="Script" uid="uid://d0gkl5vqmx5u4" path="res://CREDITS/GodotCredits.gd" id="1"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3

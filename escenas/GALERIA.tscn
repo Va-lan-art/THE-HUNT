@@ -1,18 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd88usy71tqaa"]
+[gd_scene load_steps=5 format=3 uid="uid://dd88usy71tqaa"]
 
 [ext_resource type="Script" uid="uid://1wm8on7r26br" path="res://escenas/galeria.gd" id="1_gmlum"]
-[ext_resource type="Texture2D" uid="uid://cihutiiqxb4ms" path="res://assets/FONDO3.png" id="1_me7lx"]
+[ext_resource type="Texture2D" uid="uid://cclp3h2j8nyha" path="res://assets/FONDO3.png" id="1_me7lx"]
+[ext_resource type="Texture2D" uid="uid://cui367vrri65w" path="res://assets/marcoTinta.png" id="2_tgdrd"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="3_me7lx"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-16, 44)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 68.0
-offset_top = -85.0
-offset_right = 1112.0
-offset_bottom = 718.0
+[node name="Fondo" type="TextureRect" parent="."]
+offset_left = 36.0
+offset_top = -253.0
+offset_right = 1159.0
+offset_bottom = 668.0
 texture = ExtResource("1_me7lx")
+
+[node name="Marco" type="TextureRect" parent="."]
+offset_left = -402.0
+offset_top = -351.0
+offset_right = 1563.0
+offset_bottom = 955.0
+texture = ExtResource("2_tgdrd")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(20, 20)
@@ -79,9 +88,10 @@ offset_bottom = 611.0
 text = "Anterior"
 es_boton_galeria = true
 
-[node name="BotonReutilizable" parent="." instance=ExtResource("3_me7lx")]
+[node name="Videos" parent="." instance=ExtResource("3_me7lx")]
 offset_left = 235.0
 offset_top = 486.0
 offset_right = 427.0
 offset_bottom = 604.0
+text = "Vídeos"
 nombre_escena = "VIDEOPLAYER"

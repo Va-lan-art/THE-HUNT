@@ -1,14 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://blx1xcnflkgpp"]
+[gd_scene load_steps=9 format=3 uid="uid://blx1xcnflkgpp"]
 
-[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="1_tqbvc"]
+[ext_resource type="Texture2D" uid="uid://da0b81tnyd6w2" path="res://assets/fondoAjustes.png" id="1_xjgq0"]
+[ext_resource type="Texture2D" uid="uid://cui367vrri65w" path="res://assets/marcoTinta.png" id="2_t487a"]
+[ext_resource type="FontFile" uid="uid://fyxppy4r63p5" path="res://assets/Ichigayamincho-5yKDj.ttf" id="3_t487a"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="4_5rtwu"]
-[ext_resource type="Script" path="res://script/m_usicon.gd" id="4_xjgq0"]
+[ext_resource type="Script" uid="uid://cw0fcyb61lh1" path="res://script/m_usicon.gd" id="4_xjgq0"]
 [ext_resource type="AudioStream" uid="uid://dbi6ftcrq1h2p" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="5_t487a"]
-[ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://BOTON DE SONIDO.tscn" id="7_f4jvn"]
+[ext_resource type="PackedScene" uid="uid://bndggbr7sm3ac" path="res://escenas/BOTON DE SONIDO.tscn" id="7_f4jvn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r4oa5"]
 
 [node name="AJUSTES" type="Node2D"]
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 1159.0
+offset_bottom = 966.0
+texture = ExtResource("1_xjgq0")
+
+[node name="Marco" type="TextureRect" parent="."]
+offset_left = -411.0
+offset_top = -388.0
+offset_right = 1591.0
+offset_bottom = 955.0
+texture = ExtResource("2_t487a")
+expand_mode = 1
+flip_h = true
+flip_v = true
 
 [node name="Ajustes" type="Control" parent="."]
 layout_mode = 3
@@ -18,10 +37,12 @@ offset_bottom = 40.0
 
 [node name="Sonido" type="Label" parent="Ajustes"]
 layout_mode = 0
-offset_left = 810.0
-offset_top = 66.0
-offset_right = 939.0
-offset_bottom = 117.0
+offset_left = 408.0
+offset_top = 301.0
+offset_right = 594.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("3_t487a")
+theme_override_font_sizes/font_size = 50
 text = "SONIDO"
 
 [node name="Musicoff" type="Button" parent="Ajustes"]
@@ -40,26 +61,15 @@ nombre_escena = "INTO"
 
 [node name="mUSICON" type="TextureButton" parent="Ajustes"]
 layout_mode = 0
-offset_left = 509.0
-offset_top = 95.0
-offset_right = 828.0
-offset_bottom = 377.0
+offset_left = 591.0
+offset_top = 106.0
+offset_right = 910.0
+offset_bottom = 388.0
 script = ExtResource("4_xjgq0")
 
 [node name="Musicatitlescreen" type="AudioStreamPlayer2D" parent="Ajustes/mUSICON"]
 material = SubResource("CanvasItemMaterial_r4oa5")
 stream = ExtResource("5_t487a")
-script = ExtResource("1_tqbvc")
-
-[node name="BotonReutilizable" parent="Ajustes" instance=ExtResource("4_5rtwu")]
-layout_mode = 0
-offset_left = 764.0
-offset_top = 476.0
-offset_right = 1067.0
-offset_bottom = 594.0
-text = "CREDITOS"
-nombre_escena = "GodotCredits"
-carpeta_escenas = "res://CREDITS/"
 
 [node name="SONIDOAJUSTEES" type="Node2D" parent="."]
 
@@ -67,10 +77,10 @@ carpeta_escenas = "res://CREDITS/"
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 650.0
-offset_top = 252.0
-offset_right = 650.0
-offset_bottom = 252.0
+offset_left = 616.0
+offset_top = 258.0
+offset_right = 616.0
+offset_bottom = 258.0
 grow_horizontal = 1
 grow_vertical = 1
 

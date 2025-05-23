@@ -28,7 +28,7 @@ func _ready():
 func _aplicar_estilos():
 	var estilo_borde = StyleBoxFlat.new()
 	estilo_borde.bg_color = Color(0.0, 0.0, 0.0, 0.0)  
-	estilo_borde.border_color = Color(47/255.0, 18/255.0, 5/255.0)
+	estilo_borde.border_color = Color(231/255.0, 220/255.0, 215/255.0)
 	estilo_borde.set_border_width_all(5)
 	estilo_borde.set_corner_radius_all(5)
 	estilo_borde.set_content_margin_all(10)
