@@ -33,37 +33,37 @@ var lines := []
 
 var credits = [
 	[
-		"AAAAAAAAAAAAAAA"
+		"Hunt un juego hecho con mucha desesperacíon."
 	],[
-		"Programming",
-		"Programmer Name",
-		"Programmer Name 2"
+		"Programacíon.",
+		"Alba María Calvo Molina.",
+		"Rubi (Una gran ayuda al proyecto.)"
 	],[
-		"Art",
-		"Artist Name"
+		"Arte",
+		"Alba María Calvo Molina."
 	],[
-		"Music",
-		"Musician Name"
+		"Musica",
+		"Musica proveniente de Pixabay."
 	],[
-		"Sound Effects",
-		"SFX Name"
+		"Efectos de Sonido.",
+		"Efectos de sonido provenientes de Pixabay."
 	],[
 		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
+		"Yo",
+		"Rubi",
+		"Y la clase de bellas artes, 2A."
 	],[
-		"Tools used",
-		"Developed with Godot Engine",
+		"Herramientas utilizadas",
+		"Desarrollado por el programa Godot.",
 		"https://godotengine.org/license",
-		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
+		"Programas de arte utilizados",
+		"Arte creado por el programa Clip Studio Paint.",
+		"https://www.clipstudio.net/en/dl/"
 	],[
-		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"Muchas gracias a:",
+		"Mi madre",
+		"Mi perro",
+		"Y poder  terminar este puñetero trabajo."
 	]
 ]
 

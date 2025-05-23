@@ -78,3 +78,10 @@ offset_right = 838.0
 offset_bottom = 611.0
 text = "Anterior"
 es_boton_galeria = true
+
+[node name="BotonReutilizable" parent="." instance=ExtResource("3_me7lx")]
+offset_left = 235.0
+offset_top = 486.0
+offset_right = 427.0
+offset_bottom = 604.0
+nombre_escena = "VIDEOPLAYER"

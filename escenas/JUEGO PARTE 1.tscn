@@ -1,73 +1,123 @@
-[gd_scene load_steps=8 format=3 uid="uid://krnsjn4e18w"]
+[gd_scene load_steps=9 format=3 uid="uid://krnsjn4e18w"]
 
 [ext_resource type="Texture2D" uid="uid://b11tm06tfh8ed" path="res://galeria/fondo1.png" id="1_0kwfu"]
+[ext_resource type="Script" uid="uid://c0jilalkwmlr1" path="res://escenas/juego_parte_1.gd" id="1_ro551"]
 [ext_resource type="Texture2D" uid="uid://4ekq8gl6vc3j" path="res://galeria/señora.png" id="2_iia78"]
 [ext_resource type="Texture2D" uid="uid://6bxwvfybmxly" path="res://assets/MESA.png" id="2_ro551"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_iia78"]
 
-[sub_resource type="Animation" id="Animation_iia78"]
+[sub_resource type="Animation" id="Animation_ntrfu"]
+resource_name = "JUEZA"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesa:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.19, 0.76, 1.35, 1.62, 2.18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(610, 787), Vector2(586, 726), Vector2(565, 655), Vector2(565, 624), Vector2(591, 607)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Señora:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.17, 0.75, 1.34, 1.63, 2.17),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(620, 489), Vector2(562, 445), Vector2(530, 365), Vector2(567, 333), Vector2(606, 314)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mesa:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.266667, 1.6181),
+"transitions": PackedFloat32Array(1, 2.2974),
+"update": 0,
+"values": [Vector2(0.327695, 0.889642), Vector2(0.4, 1.084)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/Señora:skew")
+tracks/3/interp = 3
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.733333, 1.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.132645, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_li47k"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Mesa:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(603, 454)]
+"values": [Vector2(610, 787)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Mesa:position")
+tracks/1/path = NodePath("AnimationPlayer/Señora:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(624, 757)]
+"values": [Vector2(605, 524)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mesa:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.327695, 0.889642)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/Señora:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_0kwfu"]
-resource_name = "Señora"
-length = 2.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.07, 1.81, 2.46667),
-"transitions": PackedFloat32Array(1, 1, 1, 1.07177),
-"update": 0,
-"values": [Vector2(603, 454), Vector2(599, 398), Vector2(599, 367), Vector2(597, 307)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Mesa:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0666667, 1.05, 1.82),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(624, 757), Vector2(605, 674), Vector2(603, 624)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ro551"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0rwwn"]
 _data = {
-&"RESET": SubResource("Animation_iia78"),
-&"Señora": SubResource("Animation_0kwfu")
+&"JUEZA": SubResource("Animation_ntrfu"),
+&"RESET": SubResource("Animation_li47k")
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ro551")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -85,19 +135,19 @@ scale = Vector2(1.3553, 1.17409)
 texture = ExtResource("1_0kwfu")
 
 [node name="Mesa" type="Sprite2D" parent="."]
-position = Vector2(624, 757)
+position = Vector2(610, 787)
 rotation = -1.56332
-scale = Vector2(0.158401, 0.768245)
+scale = Vector2(0.327695, 0.889642)
 skew = 0.000216365
 texture = ExtResource("2_ro551")
 
-[node name="Señora" type="Sprite2D" parent="."]
-position = Vector2(603, 454)
-scale = Vector2(0.96647, 0.980357)
-texture = ExtResource("2_iia78")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Señora"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_ro551")
+&"": SubResource("AnimationLibrary_0rwwn")
 }
-speed_scale = 0.807
+autoplay = "JUEZA"
+
+[node name="Señora" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(605, 524)
+scale = Vector2(0.96647, 0.973807)
+texture = ExtResource("2_iia78")

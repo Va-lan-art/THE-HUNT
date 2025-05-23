@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwsblfdhkd1sa"]
+[gd_scene load_steps=7 format=3 uid="uid://bwsblfdhkd1sa"]
 
 [ext_resource type="Texture2D" uid="uid://c0vrl67xjihjq" path="res://assets/fondo intro.png" id="1_2pfr0"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="2_b5lqy"]
 [ext_resource type="PackedScene" uid="uid://defjsrvdesdqd" path="res://classes/boton_reutilizable_jugar.tscn" id="5_v0m5j"]
-[ext_resource type="AudioStream" uid="uid://cqfdj36viviyv" path="res://SONIDOS/gunshot-and-reverse-81760.mp3" id="9_8hjl4"]
 [ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="14_u6ooh"]
 [ext_resource type="Script" uid="uid://o6njwbtdxd7g" path="res://script/musica_fondo.gd" id="15_u6ooh"]
 
@@ -50,6 +49,7 @@ offset_right = 281.655
 offset_bottom = 412.033
 text = "GALERIA"
 nombre_escena = "GALERIA"
+es_boton_galeria = false
 
 [node name="Salir" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
 layout_mode = 0
@@ -59,7 +59,7 @@ offset_right = 224.531
 offset_bottom = 518.038
 text = "SALIR"
 es_boton_salida = true
-sonido_personalizado = ExtResource("9_8hjl4")
+es_boton_galeria = false
 
 [node name="BotonReutilizableJUGAR" parent="Control/TextureRect2" instance=ExtResource("5_v0m5j")]
 layout_mode = 0
@@ -81,6 +81,7 @@ offset_right = 271.769
 offset_bottom = 315.027
 text = "AJUSTES"
 nombre_escena = "AJUSTES"
+es_boton_galeria = false
 
 [node name="musicafondo" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_u6ooh")
