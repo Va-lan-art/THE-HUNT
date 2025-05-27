@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bwsblfdhkd1sa"]
 
-[ext_resource type="Texture2D" uid="uid://ba5a10vku0n8v" path="res://assets/fondo intro.png" id="1_2pfr0"]
+[ext_resource type="Texture2D" uid="uid://c0vrl67xjihjq" path="res://assets/fondo intro.png" id="1_2pfr0"]
 [ext_resource type="PackedScene" uid="uid://dl48u6qxhqehv" path="res://classes/boton_reutilizable.tscn" id="2_b5lqy"]
 [ext_resource type="PackedScene" uid="uid://defjsrvdesdqd" path="res://classes/boton_reutilizable_jugar.tscn" id="5_v0m5j"]
-[ext_resource type="AudioStream" uid="uid://dbi6ftcrq1h2p" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="14_u6ooh"]
+[ext_resource type="AudioStream" uid="uid://d16g1xk7gdcfr" path="res://SONIDOS/silent-waves-instrumental-333295.mp3" id="14_u6ooh"]
 [ext_resource type="Script" uid="uid://o6njwbtdxd7g" path="res://script/musica_fondo.gd" id="15_u6ooh"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2pfr0"]
@@ -81,6 +81,7 @@ text = "AJUSTES"
 nombre_escena = "AJUSTES"
 
 [node name="BotonReutilizable" parent="Control/TextureRect2" instance=ExtResource("2_b5lqy")]
+layout_mode = 0
 offset_left = 727.38
 offset_top = 528.854
 offset_right = 1030.38

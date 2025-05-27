@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=12 format=3 uid="uid://5pj5qpca7m63"]
+
+[ext_resource type="Resource" uid="uid://bo0i5ge37dw4r" path="res://assets/personajes/JAMES.tres" id="1_8sy8k"]
+[ext_resource type="Script" uid="uid://c4sh3e563fefo" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ffg0x"]
+[ext_resource type="Script" uid="uid://dasq713s2880p" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_payjw"]
+
+[sub_resource type="Resource" id="Resource_re2hu"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_hbegm"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_fcbhj"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_mkgeh"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_vh628"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_ffg0x"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_faewl"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_sdyes"]
+script = ExtResource("1_ffg0x")
+overrides = {}
+
+[resource]
+script = ExtResource("9_payjw")
+name = "New_File"
+inherits = ExtResource("1_8sy8k")
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Resource_re2hu"),
+"10": SubResource("Resource_hbegm"),
+"11": SubResource("Resource_fcbhj"),
+"12": SubResource("Resource_mkgeh"),
+"13": SubResource("Resource_vh628"),
+"14": SubResource("Resource_ffg0x"),
+"15": SubResource("Resource_faewl"),
+"16": SubResource("Resource_sdyes")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_ffg0x")]([])
+metadata/_latest_layer = ""

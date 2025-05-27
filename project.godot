@@ -23,14 +23,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Abogada": "res://DIALOGIC/Abogada.dch",
-"Amelíe pato": "res://DIALOGIC/Amelíe pato.dch"
+"Amelíe pato": "res://DIALOGIC/Amelíe pato.dch",
+"Barry": "res://assets/personajes/Barry.dch",
+"James": "res://assets/personajes/James.dch",
+"Rosé": "res://assets/personajes/Rosé.dch"
 }
 directories/dtl_directory={
 "pt1": "res://DIALOGIC/pt1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://assets/personajes/JAMES.tres", "res://assets/personajes/New_File.tres"]
+layout/default_style="res://assets/personajes/JAMES.tres"
+variables={}
 
 [editor_plugins]
 

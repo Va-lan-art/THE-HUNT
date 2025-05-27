@@ -10,13 +10,14 @@ var rutas_escenas_con_musica = [
 	"res://escenas/INTO.tscn",
 	"res://escenas/AJUSTES.tscn", 
 	"res://escenas/GALERIA.tscn"
+	# Nota: "res://escenas/JUEGO PARTE 1.tscn" NO está incluida, por lo que la música se detendrá ahí
 ]
 
 func _ready():
 	# Configura el reproductor de música
 	musica_fondo = AudioStreamPlayer.new()
 	add_child(musica_fondo)
-	musica_fondo.stream = preload("res://SONIDOS/silent-waves-instrumental-333295.mp3")  # ¡Cambia esta ruta!
+	musica_fondo.stream = preload("res://SONIDOS/silent-waves-instrumental-333295.mp3")
 	musica_fondo.bus = "Master"
 	
 	# Espera a que el nodo esté en el árbol antes de acceder a get_tree()

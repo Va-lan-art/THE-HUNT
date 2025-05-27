@@ -1,2 +1,6 @@
-join  center
-<Empty Text Event>
+[wait time="3.0"]
+[music path="res://assets/personajes/opening-instrumental-12011.mp3" fade="1.0" volume="-0.1"]
+Abogada: Lamento la temprana llamada, sobretodo ya que los he llamado en mitad de una patrulla. 
+Abogada: Antes de nada, dar mis mayores condolencias, por el fallecimiento de Gerárd. 
+Abogada: Esto ha sido algo que nos ha venido de sorpresa a muchos. 
+Barry: Ya tenía una edad señora...
